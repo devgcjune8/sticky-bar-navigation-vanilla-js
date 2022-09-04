@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(80, 80, 80);
+    padding-bottom: 75px;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(rgba(10, 36, 36, 0.925), rgba(33, 63, 63, 0.966));
+}
+
+nav div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 2px;
+    transition: all 0.43s linear;
+}
+
+nav div ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.logo a {
+    text-decoration: none;
+    margin-left: 8px;
+    color: bisque;
+}
+
+nav div ul a {
+    color: aqua;
+    text-decoration: none;
+    padding: 7px 12px;
+    transition: all 0.43s ease-in-out;
+}
+
+.navigation.current {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 4.3px 10px black;
+}
+
+.navigation.current a {
+    color: black;
+}
+
+.navigation.current .container {
+    padding: 12px 2px;
+}
+
+.navigation a.positioned, .navigation a:hover {
+    color: rgb(105, 241, 241);
+    font-weight: 800;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+.contain {
+    background-image: url('https://images.unsplash.com/photo-1662186554373-ec885565963d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    z-index: -2;
+}
+
+.contain::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 255, 255, 0.212);
+    z-index: -1;
+}
+
+.contain h1 {
+    font-size: 40px;
+    margin: -25px 0 25px 0;
+}
+
+.contain p {
+    font-size: 23px;
+    letter-spacing: 2px;
+}
+
+.content h2,
+.content h3 {
+    font-size: 2em;
+    margin: 12px 1px;
+}
+
+.content p {
+    color: grey;
+    line-height: 25px;
+    letter-spacing: 0.8px;
+}
